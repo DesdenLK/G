@@ -5,13 +5,18 @@ layout (location = 1) in vec3 normal;
 layout (location = 2) in vec3 color;
 layout (location = 3) in vec2 texCoord;
 
-out vec2 vtexCoord;
+out vec4 frontColor;
+
 
 uniform mat4 modelViewProjectionMatrix;
 uniform mat3 normalMatrix;
 
+const float radi = 1;
+
 void main()
 {
-    vtexCoord = texCoord;
-    gl_Position = modelViewProjectionMatrix * vec4(vertex, 1.0);
+    vec3 N = normalize(normalMatrix * normal);
+    frontColor = vec4(color,1.0) * N.z;
+    vec3 v = normalize(vertex);
+    gl_Position = modelViewProjectionMatrix * vec4(v, 1.0);
 }
