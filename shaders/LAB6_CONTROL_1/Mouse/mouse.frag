@@ -30,11 +30,11 @@ bool elipse(vec2 xy, vec2 center, float radius, float defx, float defy) {
 void main()
 {
     vec2 xy = vec2(vtexCoord.s*10, vtexCoord.t*10);
-    if (mode == 2 && elipse (xy, vec2(4.5,4.5), 0.75, 2, 1) ||
-                     elipse (xy, vec2(5.5,4.5), 0.75, 2, 1)) fragColor = BLACK;
+    if (mode == 2 && (elipse (xy, vec2(4.5,4.5), 0.75, 2, 1) ||
+                     elipse (xy, vec2(5.5,4.5), 0.75, 2, 1))) fragColor = BLACK;
 
-    else if (mode == 2 && elipse (xy, vec2(4.5,5), 1.5, 2, 1) ||
-                          elipse (xy, vec2(5.5,5), 1.5, 2, 1)) fragColor = WHITE;
+    else if (mode == 2 && (elipse (xy, vec2(4.5,5), 1.5, 2, 1) ||
+                          elipse (xy, vec2(5.5,5), 1.5, 2, 1))) fragColor = WHITE;
 
     else if (mode > 0 && (elipse(xy, vec2(5, 3), 3, 1, 2) ||
         elipse(xy, vec2(4.5, 5), 2, 2, 1) ||
