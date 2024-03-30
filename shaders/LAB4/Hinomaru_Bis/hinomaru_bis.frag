@@ -13,7 +13,7 @@ const vec2 centre = vec2(0.5, 0.5);
 void main()
 {
     float distance = distance(centre, vtexCoord);
-    float w = length(vec2(dFdx(distance),dFdy(distance)));
+    float w = 0.7*length(vec2(dFdx(distance),dFdy(distance)));
     if (smoothstep(0.2 - w, 0.2 + w, distance) == 0) fragColor = RED;
     else fragColor = WHITE;
 }
