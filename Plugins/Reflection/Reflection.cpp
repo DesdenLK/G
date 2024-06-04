@@ -105,7 +105,7 @@ bool Reflection::paintGL()
 	program->setUniformValue("reflectionMatrix",
 		reflectionMatrix(0, -1, 0, g.scene()->boundingBox().min().y()));
 	if (drawPlugin()) drawPlugin()->drawScene();
-	
+
 	g.glBindTexture(GL_TEXTURE_2D, textureId);
 	g.glCopyTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 0, 0, IMAGE_WIDTH, IMAGE_HEIGHT);
 	g.glGenerateMipmap(GL_TEXTURE_2D);

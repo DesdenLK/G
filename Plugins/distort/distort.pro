@@ -1,2 +1,2 @@
-TARGET     = $$qtLibraryTarget(distort6)
+TARGET     = $$qtLibraryTarget(distort1)
 include(../common.pro)

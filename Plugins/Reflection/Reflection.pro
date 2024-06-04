@@ -1,2 +1,2 @@
-TARGET     = $$qtLibraryTarget(Reflection8)
+TARGET     = $$qtLibraryTarget(Reflection2)
 include(../common.pro)

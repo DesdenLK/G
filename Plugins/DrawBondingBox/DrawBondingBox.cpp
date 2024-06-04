@@ -80,7 +80,7 @@ void DrawBondingBox::postFrame()
 	widget.makeCurrent();
 	GLint polygonMode;
 	widget.glGetIntegerv(GL_POLYGON_MODE, &polygonMode);
-	widget.glPolygonMode(GL_FRONT_AND_BACK, polygonMode);
+	widget.glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 	for (Object & object : widget.scene()->objects())
 		drawBox(widget, object.boundingBox());
 	widget.glPolygonMode(GL_FRONT_AND_BACK, polygonMode);

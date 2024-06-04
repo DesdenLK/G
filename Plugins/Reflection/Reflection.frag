@@ -9,7 +9,7 @@ void main() {
 	if (mirror) {
 		vec2 st = (gl_FragCoord.xy - vec2(0.5)) / size;
 		fragColor = vec4(0.5 * vec3(0.5), 1) + 0.5 * texture2D(colorMap, st);
-	} else if (mirror) {
+	} else {
 		fragColor = vec4(vertColor, 1);
 	}
 }

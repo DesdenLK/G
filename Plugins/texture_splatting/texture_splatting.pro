@@ -1,2 +1,2 @@
-TARGET     = $$qtLibraryTarget(texture_splatting8)
+TARGET     = $$qtLibraryTarget(texture_splatting1)
 include(../common.pro)
